@@ -1,0 +1,9 @@
+mixin button(text)
+  button.ui-button&attributes(attributes)
+    span.ui-button__switch-text(data-swith-text=`${text}`)
+      span #{text}
+
+mixin link(text)
+  a.ui-button&attributes(attributes)
+    span.ui-button__switch-text(data-swith-text=`${text}`)
+      span #{text}

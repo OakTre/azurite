@@ -1,0 +1,36 @@
+-
+  arr = ["Services we provide", "Rail And Road Haulage", "Sea Freight", "Air-Freight", "Trade Facilitation And Custom Brokerage", "Warehouse Solutions"]
+
+section.service(id="services")
+  .site-container.service__container.js-reveal-block
+    .service__container-block
+      h2.service__heading.ui-main-heading
+        | Services we provide
+      ol.service__list
+        for item, index in arr
+          - isActive = index === 0 ? 'service__item--active' : ''
+          li.service__item(class=isActive data-info-nav="service-" + index)= item
+    .service__container-block
+      for item, index in arr
+        - isActive = index === 0 ? 'service__info-block--active' : ''
+        .service__info-block(class=isActive data-info-content="service-" + index style=`${index === 0 ? 'opacity:1;visibility:visible' : ''}`)
+          img(class="service__image" src="assets/images/service_img.jpg" alt="Rail And Road Haulage")
+          .service__descr
+            .service__descr-block
+              .service__descr-label
+                | We offer different service levels so we can meet all your needs
+              ul
+                li Time critical air freight
+                li Air charter
+                li Air value
+                li Sea-air
+                li Air premium
+              +button("Submit request")(class="ui-button--black service__btn")
+            .service__descr-block
+              .service__caption-item
+                .service__caption-label 480 000
+                .service__caption-text Tons of Air Freight annually
+              .service__caption-item
+                .service__caption-label 160
+                .service__caption-text International gateways
+            +button("Submit request")(class="ui-button--black service__btn service__btn--mobile")

@@ -1,0 +1,28 @@
+section.news.section(id="about")
+  .site-container.news__container.js-reveal-block
+    .news__container-block
+      h2.news__heading.ui-main-heading
+        | Providing bespoke transport solutions since 2015
+      p.news__text
+        | With a dedicated team of professionals facilitating all aspects of international shipments,
+        | we offer a personalized approach to meet the bespoke needs of our clients.
+      +button("About us")(class="ui-button--outline news__btn")
+    .news__container-block
+      .news-slider__nav-container
+        .news-slider__label
+          | NEWS
+        .news-slider__nav-btns
+          button.news-slider__nav-btn.js-prev-slide
+            +icon-mono("arrow-left")
+          button.news-slider__nav-btn.js-next-slide
+            +icon-mono("arrow-right")
+      .swiper.news-slider__swiper
+        .swiper-wrapper
+          for i in Array.from(Array(6).keys())
+            article.swiper-slide.news-card
+              a(href="/" class="news-card__hidden-link")
+              span.news-card__date 16 apr
+              h3.news-card__label
+                | Our offices around the world - find the right one for you
+              .news-card__icon
+                +icon-mono("arrow-left")

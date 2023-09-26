@@ -1,0 +1,141 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 123;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--color-white);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+    padding: 0 var(--container-padding);
+
+    &-block {
+      &:nth-child(1) {
+        grid-column: 3 span;
+      }
+
+      &:nth-child(2) {
+        grid-column: 13 span;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    @include mq(lg) {
+      display: flex;
+      gap: 0;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+
+    @include mq(lg) {
+      position: fixed;
+      top: var(--header-height);
+      left: 0;
+      width: 100%;
+      height: calc(100% - var(--header-height));
+      background-color: var(--color-white);
+      padding: 8rem var(--container-padding);
+      flex-direction: column;
+      align-items: stretch;
+      opacity: 0;
+      visibility: hidden;
+      overflow: auto;
+
+      &--is-opened {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__nav-link {
+    position: relative;
+    background-color: transparent;
+    padding: 1.4rem 4.3rem;
+    margin-right: 1.7rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.6rem;
+      font: var(--font-t5);
+      color: rgba(24, 24, 24, 0.3);
+      content: attr(data-count);
+
+      @include  mq(sm) {
+        top: 1.2rem;
+        right: auto;
+        left: calc(50% + 3.5rem);
+        transform: translateY(-50%);
+      }
+    }
+
+    @include  mq(lg) {
+      display: flex;
+      justify-content: center;
+      margin-right: 0;
+      margin-bottom: 2rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__button-login {
+    background-color: transparent;
+    padding: 1.4rem 4.3rem;
+
+    @include mq(sm) {
+      padding: 1.2rem 2rem;
+    }
+  }
+
+  &__dropdown {
+    margin-left: auto;
+    margin-right: 15.2rem;
+
+    @include mq(1360, max) {
+      margin-right: 10.2rem;
+    }
+
+    @include mq(lg) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include mq(lg) {
+      display: block;
+      margin-left: 0.8rem;
+
+      &--is-opened {
+        .ui-burger__open-icon {
+          display: none;
+        }
+        .ui-burger__close-icon {
+          display: block;
+        }
+      }
+    }
+  }
+}

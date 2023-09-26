@@ -1,0 +1,63 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  /* typography  */
+  --main-ff: "Inter", sans-serif;
+  --second-ff: "Inter", sans-serif;
+  --font-size-main: 0.595vw;
+  --font-h1: 400 5rem/1 var(--main-ff);
+  --font-h2: 400 4rem/1.2 var(--main-ff);
+  --font-h3: 400 3.2rem/1 var(--main-ff);
+  --font-h4: 400 2.2rem/1.3 var(--main-ff);
+  --font-t1: 400 3.2rem/1.2 var(--main-ff);
+  --font-t2: 400 2.4rem/1.2 var(--main-ff);
+  --font-t3: 400 1.8rem/1.2 var(--main-ff);
+  --font-t4: 400 1.6rem/1.2 var(--main-ff);
+  --font-t5: 400 1.4rem/1.2 var(--main-ff);
+
+  /* colors */
+  --color-dark: #181818;
+  --color-dark-alpha15: rgba(24, 24, 24, 0.15);
+  --color-bg: #fff;
+  --color-white: #fff;
+  --color-500: #F1F1F5;
+  --font-body: var(--font-t3);
+
+  /* etc */
+  --transition: 100ms ease-in;
+  --header-height: 9.9rem;
+  --container-width: 132.8rem;
+  --container-padding: 40px;
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/all/**/*";
+@import "./UI/controls/**/*";
+@import "./UI/parts/**/*";
+@import "./blocks/**/*";
+@import "./pages/**/*";
+
+
+@include mq(1280, max) {
+  :root {
+    --container-padding: 20px;
+  }
+}
+
+
+@include mq(sm) {
+  :root {
+    --font-h1: 400 3rem/1 var(--main-ff);
+    --font-h2: 400 2.8rem/1.2 var(--main-ff);
+    --font-h3: 400 2.4rem/1 var(--main-ff);
+    --font-h4: 400 2rem/1.3 var(--main-ff);
+    --font-t1: 400 1.8rem/1.2 var(--main-ff);
+    --font-t2: 400 1.6rem/1.2 var(--main-ff);
+    --font-t3: 400 1.4rem/1.2 var(--main-ff);
+    --font-t4: 400 1.2rem/1.2 var(--main-ff);
+    --font-t5: 400 1.4rem/1.2 var(--main-ff);
+    --header-height: 6rem;
+    --container-padding: 16px;
+  }
+}

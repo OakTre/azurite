@@ -1,0 +1,116 @@
+.footer {
+  position: relative;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  background-image: url("../images/container_bg.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain;
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 35rem;
+    width: auto;
+    object-fit: contain;
+
+    @include mq(md) {
+      height: 22.3rem;
+      transform: translateX(-17rem);
+    }
+  }
+
+  &__container {
+    width: 100%;
+    max-width: calc(152rem + var(--container-padding));
+    margin: 0 auto;
+    padding: 5.4rem var(--container-padding) 11.8rem;
+
+    @include mq(sm) {
+      padding: 6rem var(--container-padding);
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__content {
+    margin-top: 8.7rem;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    gap: 16px;
+
+    &-block {
+      grid-column: 8 span;
+
+      @include mq(md) {
+        &:nth-child(1) {
+          margin-bottom: 3.6rem;
+        }
+      }
+    }
+
+    @include mq(md) {
+      display: block;
+      margin-top: 3.6rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7.2rem 2rem;
+    padding-top: 8.4rem;
+    border-top: 1px solid rgba(255, 255, 255, 10%);
+
+    @include mq(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.6rem 1.2rem;
+      padding-top: 3.6rem;
+    }
+  }
+
+  &__item {
+    max-width: 24.4rem;
+
+    &--fake {
+      display: none;
+
+      @include mq(md) {
+        display: block;
+      }
+    }
+
+    &-label {
+      display: block;
+      font: var(--font-h4);
+      margin-bottom: 1.6rem;
+    }
+
+    &-text {
+      color: rgba(255, 255, 255, 40%);
+      font: var(--font-t5);
+
+      a {
+        display: inline-block;
+
+        &:nth-of-type(1) {
+          margin-top: 0.3rem;
+        }
+
+        &:hover {
+          color: var(--color-white);
+        }
+      }
+    }
+
+    @include mq(md) {
+      max-width: 100%;
+    }
+  }
+}

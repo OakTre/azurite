@@ -1,0 +1,9 @@
+mixin ui-dropdown()
+  .ui-dropdown__container&attributes(attributes)
+    button.ui-dropdown
+      +icon-mono("world")(class="ui-dropdown__icon")
+    .ui-dropdown__list-wrapper
+      ul.ui-dropdown__list
+        li.ui-dropdown__item.ui-dropdown__item--active English
+        li.ui-dropdown__item Russian
+        li.ui-dropdown__item France
