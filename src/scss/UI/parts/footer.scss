@@ -25,10 +25,10 @@
     width: 100%;
     max-width: calc(152rem + var(--container-padding));
     margin: 0 auto;
-    padding: 5.4rem var(--container-padding) 11.8rem;
+    padding: 5.4rem var(--container-padding) 1.5rem;
 
     @include mq(sm) {
-      padding: 6rem var(--container-padding);
+      padding: 6rem var(--container-padding) 1rem;
     }
   }
 
@@ -61,9 +61,9 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7.2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6rem 3.5rem;
     padding-top: 8.4rem;
     border-top: 1px solid rgba(255, 255, 255, 10%);
 
@@ -75,9 +75,65 @@
     }
   }
 
-  &__item {
-    max-width: 24.4rem;
+  &__copyright {
+    margin-top: 12.6rem;
 
+    @include mq(custom, max, 992) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.6rem 1.2rem;
+      margin-top: 6rem;
+    }
+
+    &-block {
+      &:nth-child(2) {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 6rem 3.5rem;
+
+        @include mq(custom, max, 992) {
+          display: block;
+        }
+      }
+    }
+
+    &-item {
+      color: rgba(255, 255, 255, 0.4);
+
+      @include mq(custom, max, 992) {
+        margin-bottom: 0.4rem;
+
+        &:last-child {
+          margin-top: 1.2rem;
+          margin-bottom: 0;
+        }
+      }
+
+      &--mw {
+        &::after {
+          display: inline-block;
+          width: 8.4rem;
+          height: 2rem;
+          background-image: url("../images/mark_weber.svg");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          content: "";
+          transform: translateY(0.8rem);
+          margin-left: 1rem;
+        }
+      }
+    }
+
+
+    a {
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
+
+  &__item {
     &--fake {
       display: none;
 
@@ -90,6 +146,7 @@
       display: block;
       font: var(--font-h4);
       margin-bottom: 1.6rem;
+      text-transform: uppercase;
     }
 
     &-text {

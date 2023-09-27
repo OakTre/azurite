@@ -9,10 +9,20 @@
   height: var(--header-height);
   background-color: var(--color-white);
 
+  &__inner {
+    --container-width: 124.8rem;
+
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+
+    @include mq(lg) {
+      width: auto;
+    }
+  }
+
   &__container {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    gap: 16px;
+    display: flex;
     align-items: center;
     width: 100%;
     padding: 0 var(--container-padding);
@@ -110,11 +120,10 @@
 
   &__dropdown {
     margin-left: auto;
-    margin-right: 15.2rem;
 
-    @include mq(1360, max) {
-      margin-right: 10.2rem;
-    }
+    //@include mq(custom, max, 1360) {
+    //  margin-right: 10.2rem;
+    //}
 
     @include mq(lg) {
       display: none;

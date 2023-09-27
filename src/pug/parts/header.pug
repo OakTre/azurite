@@ -1,16 +1,15 @@
 header.header
   .header__container
-    .header__container-block
-      a.logo(href="/")
-        img(src="assets/images/logo.svg" alt="Company Logo")
-    .header__container-block
+    a.logo(href="/")
+      img(src="assets/images/logo.svg" alt="Company Logo")
+    .site-container.header__inner
       nav.header__nav
         +link("Services")(class="header__nav-link ui-button--outline" href="#services" data-count="05")
         +link("Solutions")(class="header__nav-link ui-button--outline" href="/" data-count="06")
         +link("About us")(class="header__nav-link ui-button--outline" href="#about")
         +link("Contacts")(class="header__nav-link ui-button--outline" href="/")
       +ui-dropdown()(class="header__dropdown")
-      +button("Login")(class="ui-button--outline header__button-login")
-      button.ui-burger.header__burger
-        +icon-mono("burger")(class="ui-burger__open-icon")
-        +icon-mono("close")(class="ui-burger__close-icon")
+    +button("Login")(class="ui-button--outline header__button-login")
+    button.ui-burger.header__burger
+      +icon-mono("burger")(class="ui-burger__open-icon")
+      +icon-mono("close")(class="ui-burger__close-icon")

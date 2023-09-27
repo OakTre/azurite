@@ -15,7 +15,7 @@ export default () => {
 
     ScrollTrigger.create({
       trigger: block,
-      start: 'top 90%',
+      start: 'top 70%',
       onEnter: function () {
         gsap.to(block, { y: 0, autoAlpha: 1, duration: DURATION })
       },

@@ -11,11 +11,15 @@ export default () => {
     }
   })
 
+  const toggleItem = (item, isVisible) => {
+    item.style.opacity = isVisible ? 1 : 0
+    item.style.visibility = isVisible ? 'visible' : 'hidden'
+    item.style.transform = isVisible ? 'translateY(0)' : 'translateY(3rem)'
+  }
+
   const hideItem = (item) => {
     return new Promise((resolve, reject) => {
-      item.style.opacity = 0
-      item.style.visibility = 'hidden'
-      item.style.transform = 'translateY(3rem)'
+      toggleItem(item, false)
 
       setTimeout(() => {
         resolve()
@@ -39,12 +43,10 @@ export default () => {
       const { infoContent } = infoItems[index].dataset
 
       infoItems.forEach(item => {
-        if (item.classList.contains('service__info-block--active')) {
-          hideItem(item)
-            .then(() => {
-              item.classList.remove('service__info-block--active')
-            })
-        }
+        hideItem(item)
+          .then(() => {
+            item.classList.remove('service__info-block--active')
+          })
       })
       navItems.forEach(item => item.classList.remove('service__item--active'))
 
@@ -54,9 +56,7 @@ export default () => {
 
           showItem(infoItems[index])
             .then(() => {
-              infoItems[index].style.opacity = 1
-              infoItems[index].style.visibility = 'visible'
-              infoItems[index].style.transform = 'translateY(0)'
+              toggleItem(infoItems[index], true)
             })
         },DELAY)
 
@@ -64,5 +64,4 @@ export default () => {
       }
     })
   })
-
 }
