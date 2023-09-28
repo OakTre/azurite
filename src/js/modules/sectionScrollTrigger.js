@@ -7,7 +7,7 @@ import SplitText from '../../assets/js/gsap-bonus/SplitText';
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export default () => {
-  const DURATION = 0.6
+  const DURATION = 0.8
   const blocks = gsap.utils.toArray('.js-reveal-block')
 
   blocks.forEach((block) => {

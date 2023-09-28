@@ -1,6 +1,6 @@
 import gsap from "gsap"
 
-const DURATION = 0.6
+const DURATION = 0.8
 const timeline = gsap.timeline()
 const headerContainer = document.querySelector('.header__container')
 const introContainer = document.querySelector('.intro__container')
@@ -15,5 +15,5 @@ export const afterStart = () => {
   if (introContainer)
     timeline
       .to(headerContainer, { autoAlpha: 1, duration: DURATION })
-      .to(introContainer, { autoAlpha: 1, y: 0, duration: DURATION },'-=0.3')
+      .to(introContainer, { autoAlpha: 1, y: 0, duration: DURATION },'-=0.4')
 }
