@@ -1,6 +1,6 @@
 import gsap from "gsap"
 
-const DURATION = 0.8
+const DURATION = 0.7
 const timeline = gsap.timeline()
 const headerContainer = document.querySelector('.header__container')
 const introContainer = document.querySelector('.intro__container')

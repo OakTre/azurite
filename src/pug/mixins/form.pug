@@ -1,0 +1,15 @@
+mixin form()
+  form.form&attributes(attributes)
+    label.form__label
+      input(name="name" class="form__control" type="text" placeholder="Name")
+    label.form__label
+      input(name="phone" class="form__control" type="tel" placeholder="+7 (999) 999 99 99")
+    label.form__label
+      input(name="company_name" class="form__control" type="text" placeholder="Comany name")
+
+    label.form__check
+      input.visually-hidden(type="checkbox" name="agree")
+      span.form__check-label
+        | I agree with the &nbsp;
+        a(href="/") Privacy Policy
+    +button("Submit request")(class="ui-button--black")

@@ -1,0 +1,15 @@
+section.contact-form
+  .site-container.contact-form__container
+    .contact-form__container-block
+      p.contact-form__text.js-reveal-block
+        | If you want to join us, please use our registration platform and we will contact you
+      .contact-form__img-container.js-reveal-block
+        +imgLazy("assets/images/ship.jpg")(class="contact-form__img")
+        .contact-form__user-container
+          img.contact-form__user(src="assets/images/user.jpg")
+          .contact-form__user-label
+            span.contact-form__user-name Diego mure
+            span.contact-form__user-position Lead logistic manager
+    .contact-form__container-block
+      h2.contact-form__heading.ui-main-heading.js-reveal-block CONTACT FORM
+      +form()(class="js-reveal-block")

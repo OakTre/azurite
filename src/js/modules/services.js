@@ -33,7 +33,7 @@ export default () => {
 
       setTimeout(() => {
         resolve()
-      }, 10)
+      }, 5)
     })
   }
 

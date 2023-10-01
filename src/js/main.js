@@ -10,6 +10,7 @@ import toggleMenu from "./modules/toggleMenu"
 import vid from "./modules/vid"
 import {afterStart, beforeStart} from "./modules/firstAnim"
 import sectionScrollTrigger from "./modules/sectionScrollTrigger"
+import clientsSlider from "./modules/clientsSlider"
 
 
 documenReady(() => {
@@ -23,4 +24,5 @@ documenReady(() => {
   anchorLinks()
   toggleMenu()
   sectionScrollTrigger()
+  clientsSlider()
 })

@@ -1,10 +1,20 @@
 export default (fn, beforeLoading) => {
   const vid = document.querySelector('.intro')
-  const url = vid.dataset.vidUrl;
-  const video = document.querySelector('.intro__vid')
   const vidPreloader = document.querySelector('.loader')
 
-  if (!vid) return;
+  if (!vid) {
+    vidPreloader.style.setProperty('--progress-h', '100%');
+
+    setTimeout(() => {
+      vidPreloader.classList.remove("is-visible");
+    }, 200)
+    return
+  }
+
+  const url = vid.dataset.vidUrl;
+  const video = document.querySelector('.intro__vid')
+
+  vidPreloader.style.setProperty('--progress-h', '100%');
 
   if (typeof beforeLoading === 'function') {
     beforeLoading()

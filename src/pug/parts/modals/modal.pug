@@ -3,5 +3,15 @@
     button.button-reset.modal__close-btn.modal-close(type="button")
       span
       span
-    .modal__legend
-      | Поздравляем вы открыли модалку!
+    .modal--is-success
+      .modal__legend
+        | Thanks for application
+      .modal__text
+        | We will contact you shortly
+      +button("To main")(class="ui-button--outline modal--is-success--btn modal-close")
+    .modal--is-default
+      .modal__legend
+        | Submit request
+      .modal__text
+        | We will contact you shortly
+      +form()

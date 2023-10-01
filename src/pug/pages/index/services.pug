@@ -1,7 +1,7 @@
 -
   arr = ["Services we provide", "Rail And Road Haulage", "Sea Freight", "Air-Freight", "Trade Facilitation And Custom Brokerage", "Warehouse Solutions"]
 
-section.service(id="services")
+section.section.service(id="services")
   .site-container.service__container
     .service__container-block
       h2.service__heading.ui-main-heading.js-reveal-block
@@ -25,7 +25,7 @@ section.service(id="services")
                 li Air value
                 li Sea-air
                 li Air premium
-              +button("Submit request")(class="ui-button--black service__btn")
+              +button("Submit request")(class="ui-button--black service__btn" data-path="modal")
             .service__descr-block
               .service__caption-item
                 .service__caption-label 480 000
@@ -33,4 +33,4 @@ section.service(id="services")
               .service__caption-item
                 .service__caption-label 160
                 .service__caption-text International gateways
-            +button("Submit request")(class="ui-button--black service__btn service__btn--mobile")
+            +button("Submit request")(class="ui-button--black service__btn service__btn--mobile" data-path="modal")
