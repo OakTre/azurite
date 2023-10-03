@@ -161,17 +161,17 @@
           <div class="modal--is-default">
             <div class="modal__legend">Submit request</div>
             <div class="modal__text">We will contact you shortly</div>
-            <form class="form">
-              <label class="form__label">
-                <input class="form__control" name="name" type="text" placeholder="Name">
+            <form class="form" data-need-validation="data-need-validation">
+              <label class="form__label js-validation-wrapper">
+                <input class="form__control" name="name" type="text" placeholder="Name" data-parsley-required="data-parsley-required">
               </label>
-              <label class="form__label">
-                <input class="form__control" name="phone" type="tel" placeholder="+7 (999) 999 99 99">
+              <label class="form__label js-validation-wrapper">
+                <input class="form__control" name="phone" type="phone" placeholder="+7 (999) 999 99 99" data-parsley-required="data-parsley-required">
               </label>
               <label class="form__label">
                 <input class="form__control" name="company_name" type="text" placeholder="Comany name">
               </label>
-              <label class="form__check">
+              <label class="form__check js-validation-wrapper">
                 <input class="visually-hidden" type="checkbox" name="agree"><span class="form__check-label">I agree with the &nbsp;<a href="/">Privacy Policy</a></span>
               </label>
               <button class="ui-button ui-button--black"><span class="ui-button__switch-text" data-swith-text="Submit request"><span>Submit request</span>
