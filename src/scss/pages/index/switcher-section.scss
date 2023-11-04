@@ -1,0 +1,185 @@
+.switcher-section {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
+  &__mob-heading {
+    display: none;
+    margin-bottom: 6rem;
+
+    @include mq(lg) {
+      display: block;
+    }
+
+    @include mq(sm) {
+      margin-bottom: 3.6rem;
+    }
+  }
+
+  &__nav {
+    height: 100%;
+
+    @include mq(lg) {
+      display: none;
+    }
+
+    &-item {
+      font: var(--font-h1);
+      margin-bottom: 5.6rem;
+      max-width: 56.1rem;
+      cursor: pointer;
+      color: var(--color-dark-alpha20);
+
+      &--is-active {
+        color: var(--color-dark);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__content {
+    &-item {
+      margin-bottom: 14rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include mq(sm) {
+        margin-bottom: 8rem;
+      }
+    }
+  }
+
+  &__info {
+    &-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9.3rem 5.6rem;
+
+      @include mq(sm) {
+        gap: 3.6rem 1.2rem;
+      }
+    }
+
+    &-icon {
+      width: 8rem;
+      height: 8rem;
+      object-fit: contain;
+      margin-bottom: 2.3rem;
+
+      @include mq(sm) {
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 1.2rem;
+      }
+    }
+
+    &-text {
+      font: var(--font-t1);
+
+      br {
+        @include mq(sm) {
+          display: none;
+        }
+      }
+    }
+
+    &-text-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+
+      @include mq(sm) {
+        gap: 2rem;
+      }
+    }
+
+    &-full-image {
+      width: 100%;
+      height: auto;
+      border-radius: 0.8rem;
+      margin-bottom: 3rem;
+
+      @include mq(sm) {
+        margin-bottom: 2.8rem;
+      }
+    }
+
+    &-small-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.6rem;
+      margin-bottom: 4.5rem;
+      margin-top: 4.8rem;
+      font: var(--font-t4);
+
+      @include mq(sm) {
+        margin-top: 2.8rem;
+        margin-bottom: 2.8rem;
+      }
+    }
+
+    &-btn {
+      @include mq(sm) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &-icon-list {
+      margin-top: 7rem;
+      display: flex;
+
+      @include mq(sm) {
+        margin-top: 3.6rem;
+      }
+    }
+
+    &-icon-item {
+      flex-shrink: 0;
+      margin-right: 9.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include mq(sm) {
+        margin-right: 2.6rem;
+      }
+
+      &-moon {
+        width: 4.8rem;
+        height: 4.8rem;
+        object-fit: contain;
+        margin-bottom: 1.5rem;
+
+        @include mq(sm) {
+          width: 4.5rem;
+          height: 4.5rem;
+          margin-bottom: 1.2rem;
+        }
+      }
+
+      &-text {
+        font: var(--font-h4);
+        text-transform: uppercase;
+        letter-spacing: -0.66px;
+
+        @include mq(sm) {
+          font: var(--font-t2);
+        }
+      }
+    }
+  }
+}

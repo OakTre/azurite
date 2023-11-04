@@ -75,7 +75,7 @@ Parsley.addMessages('ru', {
   equalto: 'Несовпадающие пароли',
 });
 
-Parsley.setLocale('ru');
+Parsley.setLocale('en');
 
 export default function validation() {
   const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));

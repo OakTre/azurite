@@ -17,5 +17,13 @@ export default () => {
       delay: 1,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      320: {
+        spaceBetween: 40,
+      },
+      992: {
+        spaceBetween: 150,
+      }
+    }
   })
 }

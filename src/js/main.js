@@ -11,6 +11,8 @@ import vid from "./modules/vid"
 import {afterStart, beforeStart} from "./modules/firstAnim"
 import sectionScrollTrigger from "./modules/sectionScrollTrigger"
 import clientsSlider from "./modules/clientsSlider"
+import switcherSection from "./modules/switcherSection"
+import validation from "./modules/validation";
 
 
 documenReady(() => {
@@ -25,4 +27,6 @@ documenReady(() => {
   toggleMenu()
   sectionScrollTrigger()
   clientsSlider()
+  switcherSection()
+  validation()
 })

@@ -2,9 +2,8 @@ import gsap from "gsap";
 import {
   ScrollTrigger
 } from "gsap/dist/ScrollTrigger";
-import SplitText from '../../assets/js/gsap-bonus/SplitText';
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 export default () => {
   const DURATION = 0.7

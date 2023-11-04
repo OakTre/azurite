@@ -1,0 +1,56 @@
+-
+  arr = [
+    'Logistics blueprint coupled with computer software', 'Organization shipping implementation',
+    'Logistics strategy organizing', 'Shipping leadership structure', 'Delivery quality assurance'
+  ]
+
+section.section.switcher-section
+  .site-container.switcher-section__container
+    .switcher-section__contaiuner-block
+      ul.switcher-section__nav
+        li.switcher-section__nav-item.switcher-section__nav-item--is-active
+          | WE MONITOR #[br] QUALITY
+        li.switcher-section__nav-item
+          | LOGISTICS PROCESS PREPARATIONS
+        li.switcher-section__nav-item
+          | INNOVATIVE LOGISTICS
+    .switcher-section__contaiuner-block
+      ul.switcher-section__content
+        li.switcher-section__content-item.js-reveal-block
+          h2.switcher-section__mob-heading.ui-main-heading WE MONITOR QUALITY
+          ul.switcher-section__info-list
+            for item in arr
+              li.switcher-section__info-item
+                +imgLazy("assets/images/quality-icons/icon.svg")(class="switcher-section__info-icon")
+                p.switcher-section__info-text= item
+        li.switcher-section__content-item.js-reveal-block
+          h2.switcher-section__mob-heading.ui-main-heading LOGISTICS PROCESS PREPARATIONS
+          +imgLazy("assets/images/meeting.jpg")(class="switcher-section__info-full-image")
+          p.switcher-section__info-text
+            | Plans and objectives and goals #[br] continue being on the right track.
+          ul.switcher-section__info-small-list
+            li.switcher-section__info-small-item
+              | Typically, they all alter the tactics employed by a small-business to acquire, transport and in addition re-sell products within an industry.
+            li.switcher-section__info-small-item
+              | In certain cases, logistics consists of even more inside systems, whilst within others this involves cooperation along with distribution associates.
+          +link("Download presentation")(href="/" target="_blank" class="ui-button--black switcher-section__info-btn")
+        li.switcher-section__content-item.js-reveal-block
+          h2.switcher-section__mob-heading.ui-main-heading INNOVATIVE LOGISTICS
+          .switcher-section__info-text-wrapper
+            p.switcher-section__info-text
+              | We believe in driving results for our customers through creative solutions, forward-thinking, and imagination derived from our diverse teams.
+            p.switcher-section__info-text
+              | To us, innovation is not limited to technology, but rather progress that creates value  for our customers
+          ul.switcher-section__info-icon-list
+            li.switcher-section__info-icon-item
+              +imgLazy("assets/images/moon-icon.svg")(class="switcher-section__info-icon-item-moon")
+              p.switcher-section__info-icon-item-text
+                | Predictive #[br] Logistics
+            li.switcher-section__info-icon-item
+              +imgLazy("assets/images/moon-icon.svg")(class="switcher-section__info-icon-item-moon")
+              p.switcher-section__info-icon-item-text
+                | SUSTAINABLE #[br] Logistics
+            li.switcher-section__info-icon-item
+              +imgLazy("assets/images/moon-icon.svg")(class="switcher-section__info-icon-item-moon")
+              p.switcher-section__info-icon-item-text
+                | DATA #[br] MONETIZATION

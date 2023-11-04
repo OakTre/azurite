@@ -14,8 +14,6 @@ export default (fn, beforeLoading) => {
   const url = vid.dataset.vidUrl;
   const video = document.querySelector('.intro__vid')
 
-  vidPreloader.style.setProperty('--progress-h', '100%');
-
   if (typeof beforeLoading === 'function') {
     beforeLoading()
   }
