@@ -3,5 +3,5 @@ mixin news-item(news)
     .news-item__image-wrapper
       +imgLazy(news.image, news.alt)
     span.news-item__date= news.date
-    h3.news-item__title
-      a(href=news.link)= news.title
+    h3.news-item__title= news.title
+    button.news-item__button(type="button" title="News Content" data-path="news")

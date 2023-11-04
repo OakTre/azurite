@@ -43,16 +43,14 @@
     max-width: 56rem;
 
     font: var(--font-t2);
+  }
 
-    a {
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: "";
-      }
-    }
+  &__button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
   }
 }
