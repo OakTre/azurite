@@ -1,0 +1,5 @@
+mixin breadcrumbs(links)
+  ul.breadcrumbs
+    for link in links
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href=link.href)= link.name

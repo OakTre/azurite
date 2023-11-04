@@ -9,7 +9,7 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    gap: 16px;
+    gap: 1.6rem;
 
     &-block {
       &:nth-child(1) {
@@ -141,7 +141,7 @@
     &-label {
       margin-bottom: 3.1rem;
       font: var(--font-h2);
-      letter-spacing: -2px;
+      letter-spacing: -0.03em;
 
       @include mq(sm) {
         margin-bottom: 2.8rem;
@@ -209,7 +209,7 @@
   &__caption-label {
     font: var(--font-h1);
     margin-bottom: 1.6rem;
-    letter-spacing: -2.5px;
+    letter-spacing: -0.03em;
   }
 
   &__caption-text {

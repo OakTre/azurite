@@ -11,11 +11,11 @@ html {
   font-size: 10px;
   line-height: 1.2;
 
-  @include mq(max, 1440) {
+  @include mq(xl) {
     font-size: 9px;
   }
 
-  @include mq(max, 1280) {
+  @include mq(lg) {
     font-size: 8px;
   }
 
@@ -215,9 +215,15 @@ a:focus {
   outline: none;
 }
 
+.ui-intro-heading {
+  font: var(--font-intro);
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
 .ui-main-heading {
   font: var(--font-h1);
-  letter-spacing: -2.5px;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
 }
 

@@ -4,6 +4,7 @@
   --main-ff: "Inter", sans-serif;
   --second-ff: "Inter", sans-serif;
   --font-size-main: 0.595vw;
+  --font-intro: 400 9rem/1 var(--main-ff);
   --font-h1: 400 5rem/1 var(--main-ff);
   --font-h2: 400 4rem/1.2 var(--main-ff);
   --font-h3: 400 3.2rem/1 var(--main-ff);
@@ -40,16 +41,15 @@
 @import "./blocks/**/*";
 @import "./pages/**/*";
 
-
 @include mq(1280, max) {
   :root {
     --container-padding: 20px;
   }
 }
 
-
 @include mq(sm) {
   :root {
+    --font-intro: 400 4rem/1 var(--main-ff);
     --font-h1: 400 3rem/1 var(--main-ff);
     --font-h2: 400 2.8rem/1.2 var(--main-ff);
     --font-h3: 400 2.4rem/1 var(--main-ff);
