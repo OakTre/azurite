@@ -1,0 +1,10 @@
+mixin service-item(service)
+  article.service-item
+    .service-item__content
+      h3.service-item__title
+        a(href=service.link)= service.title
+      div.service-item__text= service.text
+      div.service-item__icon
+        +icon-mono("arrow-left")
+    .service-item__image-wrapper
+      +imgLazy(service.image, service.alt)

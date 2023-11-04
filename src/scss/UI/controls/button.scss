@@ -19,6 +19,10 @@
     border: 1px solid var(--color-dark-alpha15);
   }
 
+  &--bordered {
+    border: 1px solid var(--color-dark-alpha15);
+  }
+
   &__switch-text {
     position: relative;
     display: flex;
@@ -36,6 +40,14 @@
 
     &:after {
       transform: translateY(2.3rem);
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+
+    .ui-button__switch-text {
+      justify-content: center;
     }
   }
 

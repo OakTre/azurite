@@ -1,0 +1,7 @@
+mixin news-item(news)
+  article.news-item
+    .news-item__image-wrapper
+      +imgLazy(news.image, news.alt)
+    span.news-item__date= news.date
+    h3.news-item__title
+      a(href=news.link)= news.title
