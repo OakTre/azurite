@@ -16,10 +16,6 @@
     content: "";
   }
 
-  @include mq(sm) {
-    max-height: 66rem;
-  }
-
   &__container {
     position: relative;
     z-index: 2;
@@ -63,5 +59,42 @@
     height: 100%;
     object-fit: cover;
     transform: scale(-1, 1);
+  }
+
+  &--about {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 80rem;
+
+    .intro__btn {
+      display: none;
+    }
+
+    @include mq(lg) {
+      background-position: 70% 100%;
+
+      .intro__btn {
+        display: inline-flex;
+      }
+    }
+  }
+
+  &__breadcrumbs {
+    margin-bottom: auto;
+
+    .breadcrumbs {
+      --color: var(--color-white);
+    }
+  }
+
+  &__heading {
+    font: var(--font-intro);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+  }
+
+  @include mq(sm) {
+    max-height: 66rem;
   }
 }

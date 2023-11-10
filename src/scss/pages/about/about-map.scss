@@ -1,0 +1,66 @@
+.about-map {
+  height: 80.8rem;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 12rem 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+
+  @include mq(lg) {
+    display: none !important;
+  }
+
+  &.section {
+    margin-bottom: 0;
+  }
+
+  .site-container {
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__heading {
+    font: var(--font-h1);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+  }
+
+  &__points {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__point {
+    position: relative;
+    padding-left: 3.2rem;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 2rem;
+      height: 2rem;
+      color: #0089E9;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      content: "";
+    }
+
+    &--full {
+      &::before {
+        background-color: currentColor;
+      }
+    }
+
+    &--empty {
+      &::before {
+        border: 3px solid currentColor;
+      }
+    }
+  }
+}

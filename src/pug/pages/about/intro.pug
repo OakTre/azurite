@@ -1,0 +1,19 @@
+section.intro.section.intro--about(style="background-image: url('assets/images/about.jpg')")
+  .site-container.intro__container
+    .breadcrumbs-block.intro__breadcrumbs
+      +breadcrumbs([
+        {
+          name: 'Home',
+          href: '/'
+        },
+        {
+          name: 'About Us',
+          href: '#'
+        }
+      ])
+    h1.intro__heading
+      | about azurit
+    p.intro__text
+      | We offer tailored solutions and services for trading companies requiring the transport of metals, raw materials and high-volume products worldwide
+
+    +button("Submit request")(class="intro__btn" data-path="modal")

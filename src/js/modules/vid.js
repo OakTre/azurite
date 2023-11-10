@@ -1,5 +1,5 @@
 export default (fn, beforeLoading) => {
-  const vid = document.querySelector('.intro')
+  const vid = document.querySelector('.intro--vid')
   const vidPreloader = document.querySelector('.loader')
 
   if (!vid) {
