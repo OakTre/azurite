@@ -234,3 +234,11 @@ section.section {
     margin-bottom: 8rem;
   }
 }
+
+.ui-section {
+  &--variant {
+    &--grey {
+      background-color: var(--color-500);
+    }
+  }
+}

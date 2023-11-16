@@ -1,0 +1,23 @@
+section.intro.section.intro--service-detail(style="background-image: url('assets/images/service.jpg')")
+  .site-container.intro__container
+    .breadcrumbs-block.intro__breadcrumbs
+      +breadcrumbs([
+        {
+          name: 'Home',
+          href: '/'
+        },
+        {
+          name: 'Services',
+          href: './services.html'
+        },
+        {
+          name: 'Rail and road haulage',
+          href: '#'
+        }
+      ])
+    h1.intro__heading
+      | Rail and road haulage
+    p.intro__text
+      | We offer tailored solutions and services for trading companies requiring the transport of metals, raw materials and high-volume products worldwide
+
+    +button("Submit request")(class="intro__btn" data-path="modal")

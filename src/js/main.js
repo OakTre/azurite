@@ -12,7 +12,8 @@ import {afterStart, beforeStart} from "./modules/firstAnim"
 import sectionScrollTrigger from "./modules/sectionScrollTrigger"
 import clientsSlider from "./modules/clientsSlider"
 import switcherSection from "./modules/switcherSection"
-import validation from "./modules/validation";
+import validation from "./modules/validation"
+import imageSlider from "./modules/imageSlider"
 
 
 documenReady(() => {
@@ -29,4 +30,5 @@ documenReady(() => {
   clientsSlider()
   switcherSection()
   validation()
+  imageSlider()
 })

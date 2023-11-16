@@ -80,6 +80,17 @@
     }
   }
 
+  &--service-detail {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 80rem;
+
+    @include mq(lg) {
+      background-position: 70% 100%;
+    }
+  }
+
   &__breadcrumbs {
     margin-bottom: auto;
 

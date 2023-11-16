@@ -1,0 +1,13 @@
+- blocks = {}
+
+mixin set(key)
+  - blocks[key] = this.block
+
+mixin serviceDetailLayout()
+  section.section.service-detail&attributes(attributes)
+    block
+    .site-container.service-detail__content
+      .service-detail__content-block
+        - blocks.heading()
+      .service-detail__content-block
+        - blocks.main()

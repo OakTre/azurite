@@ -85,39 +85,10 @@
     padding: 1.5rem;
     background-color: var(--color-white);
     display: inline-flex;
-    align-items: center;
     border-radius: 0.8rem;
 
     @include mq(sm) {
       width: 100%;
-    }
-  }
-
-  &__user {
-    width: 8rem;
-    height: 8rem;
-    object-fit: cover;
-    border-radius: 50%;
-    flex-shrink: 0;
-    margin-right: 1.7rem;
-
-    @include mq(sm) {
-      width: 6.5rem;
-      height: 6.5rem;
-      margin-right: 1.6rem;
-    }
-
-    &-name {
-      display: block;
-      font: var(--font-h4);
-      text-transform: uppercase;
-      letter-spacing: -0.03em;
-      margin-bottom: 0.9rem;
-    }
-
-    &-position {
-      font: var(--font-t4);
-      color: rgba(24, 24, 24, 20%)
     }
   }
 

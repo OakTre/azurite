@@ -6,10 +6,7 @@ section.contact-form
       .contact-form__img-container.js-reveal-block
         +imgLazy("assets/images/ship.jpg")(class="contact-form__img")
         .contact-form__user-container
-          img.contact-form__user(src="assets/images/user.jpg")
-          .contact-form__user-label
-            span.contact-form__user-name Diego mure
-            span.contact-form__user-position Lead logistic manager
+          +user()
     .contact-form__container-block
       h2.contact-form__heading.ui-main-heading.js-reveal-block CONTACT FORM
       p.contact-form__text.js-reveal-block.contact-form__text--mobile
