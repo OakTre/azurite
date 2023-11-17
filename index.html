@@ -641,7 +641,72 @@
       <div class="modal__container modal__container--aside" data-target="news">
         <div class="modal__content">
           <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
-          </button>News Modal
+          </button>
+          <div class="news-content">
+            <h1>United Airlines buys 110 additional Boeing, Airbus jets into the 2030s with delivery slots scarce</h1>
+            <div class="news-content__date">16 jan, 2023</div>
+            <img src="assets/images/about.jpg">
+            <h2>United’s order consists of 50 more Boeing 787 Dreamliners</h2>
+            <p>We would not normally order jets this far out,” United’s chief commercial officer, Andrew Nocella, told reporters Tuesday. “Production lines, which are now regularly plagued by supply-chain disruptions and delivery delays, are also increasingly sold out for the entire decade. We would not normally order jets this far out,” United’s chief commercial officer, Andrew Nocella, told reporters Tuesday. “Production lines, which are now regularly plagued by supply-chain disruptions and delivery delays, are also increasingly sold out for the entire decade.</p>
+            <ul>
+              <li>The Chicago-based airline is also buying 60 Airbus</li>
+              <li>United on Tuesday announced a revamp</li>
+              <li>Delivery delays have left airlines</li>
+            </ul>
+            <img src="assets/images/about.jpg">
+            <h2>United’s order consists of 50 more Boeing 787 Dreamliners</h2>
+            <ol>
+              <li>The Chicago-based airline is also buying 60 Airbus</li>
+              <li>United on Tuesday announced a revamp</li>
+              <li>Delivery delays have left airlines</li>
+            </ol>
+            <p>We would not normally order jets this far out,” United’s chief commercial officer, Andrew Nocella, told reporters Tuesday. “Production lines, which are now regularly plagued by supply-chain disruptions and delivery delays, are also increasingly sold out for the entire decade. We would not normally order jets this far out,” United’s chief commercial officer, Andrew Nocella, told reporters Tuesday. “Production lines, which are now regularly plagued by supply-chain disruptions and delivery delays, are also increasingly sold out for the entire decade.</p>
+            <div class="swiper image-slider">
+              <div class="image-slider__nav-btns">
+                <button class="image-slider__nav-btn js-prev-slide">
+                  <svg class="icon icon-arrow-left" width="24" height="24">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="image-slider__nav-btn js-next-slide">
+                  <svg class="icon icon-arrow-right" width="24" height="24">
+                    <use xlink:href="assets/images/sprites/sprite-mono.svg#arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="lazy" data-src="assets/images/slider-image.jpg" src="assets/images/placeholder.png">
+                </div>
+                <div class="swiper-slide">
+                  <img class="lazy" data-src="assets/images/slider-image.jpg" src="assets/images/placeholder.png">
+                </div>
+                <div class="swiper-slide">
+                  <img class="lazy" data-src="assets/images/slider-image.jpg" src="assets/images/placeholder.png">
+                </div>
+                <div class="swiper-slide">
+                  <img class="lazy" data-src="assets/images/slider-image.jpg" src="assets/images/placeholder.png">
+                </div>
+              </div>
+              <div class="image-slider__pagi image-slider-pagination"></div>
+            </div>
+            <script type="module">
+              import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+              const sliderEL = document.querySelector('.image-slider')
+
+              const slider = new Swiper(sliderEL, {
+                slidesPerView: 1,
+                spaceBetween: 16,
+                navigation: {
+                  nextEl: sliderEL.querySelector('.js-next-slide'),
+                  prevEl: sliderEL.querySelector('.js-prev-slide')
+                },
+                pagination: {
+                  el: '.image-slider-pagination',
+                },
+              })
+            </script>
+          </div>
         </div>
       </div>
     </div>
