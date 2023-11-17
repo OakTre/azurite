@@ -30,5 +30,5 @@ documenReady(() => {
   clientsSlider()
   switcherSection()
   validation()
-  imageSlider()
+  // imageSlider()
 })

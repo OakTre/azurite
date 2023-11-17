@@ -1,0 +1,34 @@
+mixin imageSlider()
+  .swiper.image-slider
+    .image-slider__nav-btns
+      button.image-slider__nav-btn.js-prev-slide
+        +icon-mono("arrow-left")
+      button.image-slider__nav-btn.js-next-slide
+        +icon-mono("arrow-right")
+    .swiper-wrapper
+      .swiper-slide
+        +imgLazy('assets/images/slider-image.jpg')
+      .swiper-slide
+        +imgLazy('assets/images/slider-image.jpg')
+      .swiper-slide
+        +imgLazy('assets/images/slider-image.jpg')
+      .swiper-slide
+        +imgLazy('assets/images/slider-image.jpg')
+    .image-slider__pagi.image-slider-pagination
+
+
+  script(type='module').
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+    const sliderEL = document.querySelector('.image-slider')
+
+    const slider = new Swiper(sliderEL, {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      navigation: {
+        nextEl: sliderEL.querySelector('.js-next-slide'),
+        prevEl: sliderEL.querySelector('.js-prev-slide')
+      },
+      pagination: {
+        el: '.image-slider-pagination',
+      },
+    })

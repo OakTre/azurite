@@ -25,18 +25,4 @@ section.section.service-numbers
           | Control towers in Europe and China
 
 
-    .swiper.image-slider
-      .image-slider__nav-btns
-        button.image-slider__nav-btn.js-prev-slide
-          +icon-mono("arrow-left")
-        button.image-slider__nav-btn.js-next-slide
-          +icon-mono("arrow-right")
-      .swiper-wrapper
-        .swiper-slide
-          +imgLazy('assets/images/slider-image.jpg')
-        .swiper-slide
-          +imgLazy('assets/images/slider-image.jpg')
-        .swiper-slide
-          +imgLazy('assets/images/slider-image.jpg')
-        .swiper-slide
-          +imgLazy('assets/images/slider-image.jpg')
+    +imageSlider()

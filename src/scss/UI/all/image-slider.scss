@@ -25,6 +25,10 @@
     right: 4rem;
     display: flex;
     gap: 1.2rem;
+
+    @include mq(sm) {
+      display: none;
+    }
   }
 
   &__nav-btn {
@@ -36,9 +40,39 @@
     justify-content: center;
     border-radius: 0.6rem;
 
+    &.swiper-button-disabled {
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
     &:nth-child(2) {
       svg {
         transform: translateY(0.2rem);
+      }
+    }
+  }
+
+  &__pagi {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.6rem;
+    user-select: none;
+
+    @include mq(sm) {
+      display: flex;
+    }
+
+    .swiper-pagination-bullet {
+      display: block;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      background-color: #D9D9D9;
+
+      &.swiper-pagination-bullet-active {
+        background-color: rgba(#181818, 60%);
       }
     }
   }
