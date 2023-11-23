@@ -5,4 +5,17 @@ main.page-main.main
   include numberedList.pug
   include quote.pug
   include bulletList.pug
+
+  section.section.about-map.lazy(data-bg='assets/images/map.svg')
+    .site-container.js-reveal-block
+      h2.about-map__heading
+        | route geography
+      +link('Contact us')(href="./contact-us.html")
+
+      .about-map__points
+        .about-map__point.about-map__point--full
+          | DESTINATION POINTS
+        .about-map__point.about-map__point--empty
+          | INTERMEDIATE POINTS
+
   include ../../parts/form
