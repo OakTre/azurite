@@ -140,6 +140,7 @@
     font: var(--font-t2);
     letter-spacing: -0.72px;
     max-width: 33.7rem;
+    margin-bottom: 2rem;
 
     @include mq(sm) {
       font: var(--font-h3);
@@ -151,6 +152,10 @@
     font: var(--font-t3);
     letter-spacing: -0.54px;
     color: var(--color-dark-alpha40);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 
     @include mq(sm) {
       font: var(--font-t1);

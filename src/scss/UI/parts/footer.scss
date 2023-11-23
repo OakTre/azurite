@@ -7,6 +7,11 @@
   background-position: bottom left;
   background-size: contain;
 
+  @include mq(sm) {
+    background-position: 29% 101%;
+    background-size: 195% 50%;
+  }
+
   &__img {
     position: absolute;
     bottom: 0;
@@ -98,6 +103,7 @@
     }
 
     &-item {
+      font: var(--font-t5);
       color: rgba(255, 255, 255, 0.4);
 
       @include mq(custom, max, 992) {

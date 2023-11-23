@@ -42,7 +42,7 @@
 @import "./blocks/**/*";
 @import "./pages/**/*";
 
-@include mq(1280, max) {
+@include mq(custom, max, 1280) {
   :root {
     --container-padding: 20px;
   }

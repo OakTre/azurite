@@ -44,9 +44,21 @@
       height: 100%;
 
       overflow: auto;
+      background-color: var(--color-white);
 
       @include mq(md) {
         max-width: 100% !important;
+
+        .modal__close-btn {
+          width: 4rem;
+          height: 4rem;
+          background-color: #F1F1F5;
+          border-radius: 0.4rem;
+
+          span {
+            width: 1.6rem;
+          }
+        }
       }
     }
 
